@@ -46,25 +46,52 @@ function Page({ params }) {
             </main>
             <ul className="language-using">
               <h2>Language Using</h2>
-              <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-              </ul>
+              <ul id="language" >
+              {service.languages.map((language, index) => (
+                  <li key={index}>{language}</li>
+                ))}
+                </ul>
             </ul>
             <ul className="what-will-get">
               <h2>What You Will Get</h2>
               <ul>
                 <li>kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>2kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv </li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
+                <li>
+                  2kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev kjbv
+                  jvnoivoefbvoefiv{" "}
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
+                <li>
+                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
+                  evnnivneipvnevjrlv woivioevelnvev
+                </li>
               </ul>
             </ul>
             <div>{service.form}</div>
