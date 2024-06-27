@@ -121,9 +121,21 @@
 .apply-div > ul >div{
     width: 80vw;
 }
-.apply-div > ul >p{
-    width: 50%;
-    text-align: center;
-    font-size: 18px;
+.apply-div > ul >main{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 50px;
+    height: 40vh;
+}
+.apply-div > ul >main>img{
+  width: 25%;
+  border: 1px solid black;
+  background-color: #000000;
+  min-height: 400px;
+}
+.apply-div > ul >main>p{
+  font-size: 18px;
+  width: 40%;
 }

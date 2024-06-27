@@ -24,7 +24,10 @@ async function Page({ params }) {
         <div className="apply-div">
           <ul>
             <h1>{service.title}</h1>  
-            <p>{service.description}</p>  
+            <main>
+              <img src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg" alt="" />  
+              <p>{service.description}</p>
+            </main>  
             <div>{service.form}</div>  
           </ul>        
         </div>
