@@ -91,7 +91,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba(168, 168, 168, 0.116);
 }
 .div-sell>h1{
