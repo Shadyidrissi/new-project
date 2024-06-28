@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import emailjs from "@emailjs/browser";
+import checkInput from '../function/function'
+import Swal from 'sweetalert2'
 
 function Form(props) {
   const form = useRef();
@@ -20,7 +22,25 @@ function Form(props) {
 
     const formData = new FormData(form.current);
     formData.append('option', deploymentOptions);
-
+    const check =checkInput(formData.get("firstName"),formData.get("lastName"),formData.get("country"),formData.get("email"),formData.get("functionType"))
+    if (!check== '') {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 6000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "error",
+        title: `${check}`
+      });
+      return ;
+    }
     emailjs
       .send("service_kl7jslm", "template_3mfyzla", {
         firstName: formData.get("firstName"),
@@ -34,7 +54,22 @@ function Form(props) {
       }, "OUFjExamyWKiw3ZGc")
       .then(
         () => {
-          console.log("SUCCESS!");
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Submit is successfully"
+          });          
+          form.current.reset(); 
         },
         (error) => {
           console.log("FAILED...", error.text);
