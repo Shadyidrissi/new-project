@@ -1,6 +1,59 @@
-import React from 'react';
+"use client"; // Add this line at the top
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
+import { InfoContact } from '../function/function';
 
 function Page() {
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    
+    const name = form.current.user_name.value;
+    const email = form.current.user_email.value;
+    const message = form.current.message.value;
+    
+    form.current.reset();
+    const validationError = InfoContact(name, email, message);
+    
+    if (validationError) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Validation Error',
+        text: validationError,
+      });
+      return;
+    }
+
+    emailjs
+      .sendForm('service_325gotd', 'template_xt4rv7u', form.current, 'OUFjExamyWKiw3ZGc')
+      .then(
+        () => {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Submit is successfully"
+          });
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
+
   return (
     <section className="bg-white " id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -33,8 +86,8 @@ function Page() {
                   </div>
                   <div className="ml-4">
                     <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-black">Our Address</h3>
-                    <p className="text-gray-600 dark:text-slate-400">1230 Maecenas Street Donec Road</p>
-                    <p className="text-gray-600 dark:text-slate-400">New York, USA</p>
+                    <p className="text-gray-600 dark:text-slate-400">mhamid 7</p>
+                    <p className="text-gray-600 dark:text-slate-400">Marrakech, MORO</p>
                   </div>
                 </li>
                 <li className="flex">
@@ -47,8 +100,8 @@ function Page() {
                   </div>
                   <div className="ml-4">
                     <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-black">Contact</h3>
-                    <p className="text-gray-600 dark:text-slate-400">Mobile: +1 (123) 456-7890</p>
-                    <p className="text-gray-600 dark:text-slate-400">Mail: tailnext@gmail.com</p>
+                    <p className="text-gray-600 dark:text-slate-400">Mobile: +2126 43082137</p>
+                    <p className="text-gray-600 dark:text-slate-400">Mail: chadiidac@gmail.com</p>
                   </div>
                 </li>
                 <li className="flex">
@@ -66,25 +119,32 @@ function Page() {
                 </li>
               </ul>
             </div>
-            <div className="card max-w-6xl p-5 md:p-12">
-              <h2 className="mb-4 text-2xl font-bold dark:text-white">Ready to Get Started?</h2>
-              <form id="contactForm">
-                <div className="mb-6">
+            <div className="card">
+              <form ref={form} onSubmit={sendEmail} className="p-8 rounded-lg shadow-lg sm:p-12">
+                <div className="mb-6 w-full">
+                  <h2 className="font-heading mb-1 font-bold tracking-tight text-gray-900 dark:text-black text-2xl sm:text-3xl">
+                    Get a free quote
+                  </h2>
+                  <p className="text-gray-600 dark:text-slate-400">
+                    Fill out the form below and we will get back to you as soon as possible.
+                  </p>
+                </div>
+                <div className="grid gap-4 lg:grid-cols-2">
                   <div className="mx-0 mb-1 sm:mb-4">
                     <label htmlFor="name" className="pb-1 text-xs uppercase tracking-wider">Name</label>
-                    <input type="text" id="name" autoComplete="given-name" placeholder="Your name" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="name" />
+                    <input name="user_name" type="text" id="name" autoComplete="name" placeholder="Your name" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-black sm:mb-0" />
                   </div>
                   <div className="mx-0 mb-1 sm:mb-4">
                     <label htmlFor="email" className="pb-1 text-xs uppercase tracking-wider">Email</label>
-                    <input type="email" id="email" autoComplete="email" placeholder="Your email address" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="email" />
+                    <input name="user_email" type="email" id="email" autoComplete="email" placeholder="Your email address" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-black sm:mb-0" />
                   </div>
                 </div>
                 <div className="mx-0 mb-1 sm:mb-4">
                   <label htmlFor="textarea" className="pb-1 text-xs uppercase tracking-wider">Message</label>
-                  <textarea id="textarea" name="textarea" cols={30} rows={5} placeholder="Write your message..." className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
+                  <textarea id="textarea" name="message" cols={30} rows={5} placeholder="Write your message..." className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-black sm:mb-0"></textarea>
                 </div>
                 <div className="text-center">
-                  <button type="submit" className="w-full bg-black text-white px-6 py-3 font-xl hover:bg-white hover:text-black  sm:mb-0" style={{border:'1px solid black' }}>Send Message</button>
+                  <button type="submit" className="w-full bg-black text-white px-6 py-3 font-xl hover:bg-white hover:text-black sm:mb-0" style={{ border: '1px solid black' }}>Send Message</button>
                 </div>
               </form>
             </div>
