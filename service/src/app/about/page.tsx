@@ -1,11 +1,11 @@
 import React from "react";
-import '../style/style.css'
+import "../style/style.css";
 function AboutUs() {
   return (
     <>
-    <div className="divTitle">
-      <h1 className="title-about">hello world</h1>
-    </div>
+      <div className="divTitle">
+        <h1 className="title-about">About Us</h1>
+      </div>
       <div className="sm:flex items-center max-w-screen-xl mx-auto">
         <div className="sm:w-1/2 p-10">
           <div className="image object-center text-center">
@@ -27,9 +27,15 @@ function AboutUs() {
               About <span className="text-gray-400">Our Company</span>
             </h2>
             <p className="text-black">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-              commodi doloremque, fugiat illum magni minus nisi nulla numquam
-              obcaecati placeat quia, repellat tempore voluptatum.
+              ﻿BEGO is a dynamic corporation that specialize in current
+              technology solutions. We excel in building strong APIs and
+              complete stack packages, making sure seamless integration and
+              capability. Our knowledge extends to designing intuitive and
+              attractive UI/UX interfaces that beautify person studies.
+              Additionally, we create professional and impactful commercial
+              enterprise playing cards that leave an enduring influence. At
+              BEGO, we are dedicated to turning in innovative and notable
+              services to satisfy the various desires of our customers.
             </p>
           </div>
         </div>
@@ -45,12 +51,12 @@ function AboutUs() {
                 <div className="flex justify-center">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/5935/5935741.png"
-                    className="w-32 mb-3"
+                    className="w-28 mb-3"
                     alt="Latest Milling Machinery"
                   />
                 </div>
                 <h2 className="title-font font-regular text-2xl text-gray-900">
-                  Latest Milling Machinery
+                  Ongoing Support
                 </h2>
               </div>
             </div>
@@ -60,12 +66,12 @@ function AboutUs() {
                 <div className="flex justify-center">
                   <img
                     src="https://static.thenounproject.com/png/818026-200.png"
-                    className="w-32 mb-3"
+                    className="w-28 mb-3"
                     alt="Reasonable Rates"
                   />
                 </div>
                 <h2 className="title-font font-regular text-2xl text-gray-900">
-                  Reasonable Rates
+                  24/7 Available
                 </h2>
               </div>
             </div>
@@ -75,7 +81,7 @@ function AboutUs() {
                 <div className="flex justify-center">
                   <img
                     src="https://cdn-icons-png.flaticon.com/256/782/782899.png"
-                    className="w-32 mb-3"
+                    className="w-28 mb-3"
                     alt="Time Efficiency"
                   />
                 </div>

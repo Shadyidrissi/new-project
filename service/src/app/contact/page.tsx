@@ -6,7 +6,7 @@ function Page() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-4">
           <div className="mb-6 max-w-3xl text-center md:mx-auto md:mb-12">
-            <p className="text-base font-semibold uppercase tracking-wide text-blue-900 dark:text-blue-600">
+            <p className="text-base font-semibold uppercase tracking-wide text-blue-900 dark:text-black">
               Contact
             </p>
             <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-black text-3xl sm:text-5xl">
@@ -25,7 +25,7 @@ function Page() {
               </p>
               <ul className="mb-6 md:mb-0 space-y-4">
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded bg-black text-gray-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
                       <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
                       <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
@@ -38,7 +38,7 @@ function Page() {
                   </div>
                 </li>
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded bg-black text-gray-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
                       <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
                       <path d="M15 7a2 2 0 0 1 2 2"></path>
@@ -52,7 +52,7 @@ function Page() {
                   </div>
                 </li>
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded bg-black text-gray-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
                       <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
                       <path d="M12 7v5l3 3"></path>
@@ -84,7 +84,7 @@ function Page() {
                   <textarea id="textarea" name="textarea" cols={30} rows={5} placeholder="Write your message..." className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
                 </div>
                 <div className="text-center">
-                  <button type="submit" className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+                  <button type="submit" className="w-full bg-black text-white px-6 py-3 font-xl hover:bg-white hover:text-black  sm:mb-0" style={{border:'1px solid black' }}>Send Message</button>
                 </div>
               </form>
             </div>

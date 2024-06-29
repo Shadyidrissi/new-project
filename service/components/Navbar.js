@@ -1,51 +1,20 @@
 import React from "react";
 import "./style.css";
 import Link from "next/link";
+
 function Navbar() {
   return (
-    <nav
-      class="flex justify-between px-20 py-10 items-center "
-      style={{ height: "10vh" }}
-    >
-      <h1 class="text-xl text-gray-800 font-bold">BeGo</h1>
-      <div class="flex items-center">
-        {/* <div class="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 pt-0.5 text-gray-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <input
-            class="ml-2 outline-none bg-transparent font-"
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search..."
-          />
-        </div> */}
-        <ul className="flex items-center space-x-6 navbar-div">
-          <li
-            style={{ cursor: "pointer" }}
-            className="font-semibold text-gray-700"
-          >
+    <nav className="flex justify-between px-5 sm:px-10 md:px-20 py-5 md:py-10 items-center bg-white shadow-md" style={{ height: "10vh" }}>
+      <h1 className="text-lg sm:text-xl text-gray-800 font-bold">BeGo</h1>
+      <div className="flex items-center">
+        <ul className="flex items-center space-x-4 sm:space-x-6 md:space-x-8">
+          <li className="font-semibold text-gray-700 ">
             <Link href="/">Home</Link>
           </li>
-          <li
-            style={{ cursor: "pointer" }}
-            className="font-semibold text-gray-700"
-          >
+          <li className="font-semibold text-gray-700 ">
             <Link href="/service">Service</Link>
           </li>
-          <li style={{ cursor: "pointer" }}>
+          <li className="">
             <Link href="/contact">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +22,7 @@ function Navbar() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-6"
+                className="w-5 h-5 sm:w-6 sm:h-6"
               >
                 <path
                   strokeLinecap="round"
@@ -63,7 +32,7 @@ function Navbar() {
               </svg>
             </Link>
           </li>
-          <li style={{ cursor: "pointer" }}>
+          <li className="">
             <Link href="/about">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +40,7 @@ function Navbar() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-6"
+                className="w-5 h-5 sm:w-6 sm:h-6"
               >
                 <path
                   strokeLinecap="round"
@@ -81,23 +50,23 @@ function Navbar() {
               </svg>
             </Link>
           </li>
-          <li style={{ cursor: "pointer" }}>
-          <Link href="" >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          <li className="">
+            <Link href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5 sm:w-6 sm:h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
               />
-            </svg>
-          </Link>
+              </svg>
+            </Link>
           </li>
         </ul>
       </div>

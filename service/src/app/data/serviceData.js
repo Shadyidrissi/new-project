@@ -375,10 +375,10 @@ const serviceData = [
         price={["Less-10$", "50$-100$", "100$-More"]}
       />
     ),
-    url: "",
+    url: "https://wcs.uwo.ca/upload/CE0060b.png",
     title: "build Full satck web",
     description:
-      "dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essedummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining esse",
+      "﻿We provide give up-to-cease complete stack website improvement services that deliver your imaginative and prescient to lifestyles. Our crew of skilled developers and architects paintings collaboratively to create dynamic, responsive, and user-pleasant web sites that cater on your particular business needs. We handle every component of development, from front-cease design and consumer experience to returned-quit programming and database control. Utilizing the modern technology and excellent practices, we make sure your internet site isn't always simplest visually appealing but also exceedingly functional and secure. Whether you're looking to construct an e-trade platform, a company website online, or a custom web utility, we supply solutions that are scalable, maintainable, and tailored to enhance your online presence. Trust us to increase a full stack internet site that drives engagement and achieves your commercial enterprise goals.",
     icon: (
       <svg
         width="70"
@@ -423,6 +423,7 @@ const serviceData = [
         </svg>
       </svg>
     ),
+    list:['100% Money Back Guarantee.','Unlimited Revisions','24/7 Support','7-day delivery','Functional website','10 pages','Opt-in form','Autoresponder integration','Speed optimization','Social media icons','SEO']
   },
   {
     languages: [
@@ -801,9 +802,10 @@ const serviceData = [
         price={["Less-10$", "50$-100$", "100$-More"]}
       />
     ),
-    url: "",
+    url: "https://t4.ftcdn.net/jpg/03/22/95/69/360_F_322956978_9ESBVewTYdhSu9G6qf2JazX9tUsdh53g.jpg",
     title: "build API",
-    description: "",
+    description:
+      "﻿We offer comprehensive API development services designed to seamlessly integrate and decorate your virtual surroundings. Our crew of skilled developers specializes in developing strong, scalable, and secure APIs that allow efficient conversation between unique software program applications. Whether you want RESTful, GraphQL, or custom APIs, we tailor our answers to fulfill your unique commercial enterprise requirements. We attention on performance, reliability, and safety to make certain your APIs are optimized for excessive availability and rapid reaction times. From initial layout and improvement to trying out and deployment, we deal with each component of the API lifecycle, supplying you with effective tools to enhance functionality and streamline operations. Trust us to build APIs that power innovation and aid your business increase.",
     icon: (
       <svg width="70" height="70" viewBox="0 0 512 512" class="h-full w-full">
         <rect
@@ -837,6 +839,7 @@ const serviceData = [
         </svg>
       </svg>
     ),
+    list:['10-day delivery','Unlimited Revisions','Opt-in form','Payment processing','Build a custom web scraper','Data Storing in Google Sheet','Focusing on Awesome Work Delivery','Great Communicator and QA & Problem ','Maintaining Coherent Working Relations ','Experienced MERN Stack Developer']
   },
   {
     languages: [
@@ -1017,9 +1020,10 @@ const serviceData = [
         price={["Less-7$", "30$-70$", "70$-More"]}
       />
     ),
-    url: "",
+    url: "https://www.uikitsnow.com/wp-content/uploads/2022/07/figma-black-white-dashboard-min-1536x1152-1.png",
     title: "design UI UX",
-    description: "",
+    description:
+      "﻿We specialise in developing intuitive and attractive UI/UX designs that enhance user enjoy and power enterprise success. Our team of professional designers makes a speciality of knowledge your users' wishes and behaviors to expand interfaces that are not handiest visually attractive however additionally quite useful. We prioritize usability, accessibility, and responsiveness, making sure that your digital merchandise provide a unbroken experience across all gadgets. From wireframes and prototypes to the very last design, we paintings collaboratively with you to carry your imaginative and prescient to life, growing person-centric solutions that increase your brand and hold your audience coming lower back. Trust us to deliver designs that are not handiest lovely however also powerful, reworking your digital presence and boosting person satisfaction.",
     icon: (
       <svg
         width="70"
@@ -1071,6 +1075,7 @@ const serviceData = [
         </svg>
       </svg>
     ),
+    list:['Ongoing Support','24/7 Available','Excellent Communication','Highly Experienced','8 pages','Responsive design','Source file','    Modern, Accessible, and User-friendly Interface','    Professional Landing Page UI ','    Attractive Figma Design','    Awesome Icons, Fonts & Colors Used']
   },
   {
     languages: [
@@ -1165,13 +1170,19 @@ const serviceData = [
       <Form
         title="design business card"
         f="Name of Your Company"
-        list={["Front & back design", "Source files & Print Ready & PDF & JPEG files","Print Ready & PDF & JPEG files","PDF & JPEG files"]}
+        list={[
+          "Front & back design",
+          "Source files & Print Ready & PDF & JPEG files",
+          "Print Ready & PDF & JPEG files",
+          "PDF & JPEG files",
+        ]}
         price={["Less-5$", "10$-20$", "20$-More"]}
       />
     ),
-    url: "",
+    url: "https://www.creatisimo.net/wp-content/uploads/2020/02/Minimal-Business-Card.jpg",
     title: "design business card",
-    description: "",
+    description:
+      "﻿We understand that a enterprise card is extra than just a piece of paper—it's a powerful networking tool and a representation of your emblem. We concentrate on developing custom, incredible enterprise cards that leave a lasting influence. Our expert designers work closely with you to craft a unique design that reflects your emblem's identification, ensuring that each detail, from typography to emblem integration, is meticulously tailored on your vision. With a lot of top rate materials and finishes available, we assure a professional and complicated look that sticks out. Trust us to deliver commercial enterprise cards that not best meet however exceed your expectations, supporting you are making a memorable effect in every professional interaction.",
     icon: (
       <svg
         width="70"
@@ -1217,6 +1228,7 @@ const serviceData = [
         </svg>
       </svg>
     ),
+    list:['High Quality Resolution','Printable designs','Deliverable files will be JPG, Transparent PNG, and editable PDF','Creative work','Excellent Communication','100% buyer satisfaction is my priority','Fantastic customer support!','Fast delivery']
   },
 ];
 export default serviceData;

@@ -38,60 +38,23 @@ function Page({ params }) {
           <ul>
             <h1>{service.title}</h1>
             <main>
-              <img
-                src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
-                alt=""
-              />
+              <img src={`${service.url}`} alt="" />
               <p>{service.description}</p>
             </main>
             <ul className="language-using">
               <h2>Language Using</h2>
-              <ul id="language" >
-              {service.languages.map((language, index) => (
+              <ul id="language">
+                {service.languages.map((language, index) => (
                   <li key={index}>{language}</li>
                 ))}
-                </ul>
+              </ul>
             </ul>
             <ul className="what-will-get">
               <h2>What You Will Get</h2>
               <ul>
-                <li>kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev</li>
-                <li>
-                  2kjbv jvnoivoefbvoefiv evnnivneipvnevjrlv woivioevelnvev kjbv
-                  jvnoivoefbvoefiv{" "}
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
-                <li>
-                  evnnivneipvnevjrlv woivioevelnvev kjbv jvnoivoefbvoefiv
-                  evnnivneipvnevjrlv woivioevelnvev
-                </li>
+                {service.list.map((list, index) => {
+                  return <li key={index}>{list}</li>;
+                })}
               </ul>
             </ul>
             <div>{service.form}</div>

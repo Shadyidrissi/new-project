@@ -267,7 +267,7 @@ function Form(props) {
           <button
             type="submit"
             style={{ border: "1px solid black" }}
-            className="bg-white px-3 py-2 text-medium font-semibold text-black shadow-sm hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-200"
+            className="bg-black px-3 py-2 text-medium font-semibold text-white shadow-sm hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-200"
           >
             Submit
           </button>
