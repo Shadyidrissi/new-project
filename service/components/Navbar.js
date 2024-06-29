@@ -51,7 +51,7 @@ function Navbar() {
             </Link>
           </li>
           <li className="">
-            <Link href="">
+            <Link href="https://shady-portfolio.web.app/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
