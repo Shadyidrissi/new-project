@@ -13,6 +13,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
 }
 .text-home > h2 {
   font-size: 33px;
@@ -29,6 +30,7 @@ body{
   padding: 8px 18px;
   margin-top: 10px;
   text-align: center;
+
 }
 #link-Link:hover {
   border: 1px solid black;
