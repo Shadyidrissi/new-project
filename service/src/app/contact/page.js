@@ -14,8 +14,8 @@ function Page() {
     const name = form.current.user_name.value;
     const email = form.current.user_email.value;
     const message = form.current.message.value;
-    
     form.current.reset();
+    
     const validationError = InfoContact(name, email, message);
     
     if (validationError) {
