@@ -3,7 +3,7 @@ export function url(title) {
   return result;
 }
 
-export default function checkInput(firstname, lastname, country, email, type) {
+ function checkInput(firstname, lastname, country, email, type) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if ((!firstname || !lastname || !country || !email || !type)) {
     return "Input is empty";
@@ -22,3 +22,4 @@ export default function checkInput(firstname, lastname, country, email, type) {
   }
   return null;
 }
+export default checkInput;
