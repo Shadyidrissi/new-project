@@ -1,10 +1,7 @@
-"use client"; // Add this line at the top
-
+"use client"
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
-
-
 
 function InfoContact(name, email, message) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,11 +29,10 @@ function Page() {
     const name = form.current.user_name.value;
     const email = form.current.user_email.value;
     const message = form.current.message.value;
-    form.current.reset();
     
-    const validationError = InfoContact(name, email, message);
+    const validationError =  InfoContact(name, email, message);
     
-    if (validationError) {
+    if (validationError != null) {
       Swal.fire({
         icon: 'error',
         title: 'Validation Error',
@@ -45,24 +41,12 @@ function Page() {
       return;
     }
 
-    emailjs
-      .sendForm('service_325gotd', 'template_xt4rv7u', form.current, 'OUFjExamyWKiw3ZGc')
+    emailjs.sendForm('service_325gotd', 'template_xt4rv7u',form.current, 'OUFjExamyWKiw3ZGc')
       .then(
-         () => {
-          const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;  
-            }
-          }); 
-          Toast.fire({
+        () => {
+          Swal.fire({
             icon: "success",
-            title: "Submit is successfully"
+            title: "Submit is successfully",
           });
           form.current.reset(); 
         },
