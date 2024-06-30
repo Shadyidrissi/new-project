@@ -48,7 +48,7 @@ function Page() {
     emailjs
       .sendForm('service_325gotd', 'template_xt4rv7u', form.current, 'OUFjExamyWKiw3ZGc')
       .then(
-        () => {
+         () => {
           const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -57,14 +57,14 @@ function Page() {
             timerProgressBar: true,
             didOpen: (toast) => {
               toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;
+              toast.onmouseleave = Swal.resumeTimer;  
             }
-          });
+          }); 
           Toast.fire({
             icon: "success",
             title: "Submit is successfully"
           });
-          form.current.reset();
+          form.current.reset(); 
         },
         (error) => {
           console.log('FAILED...', error.text);
