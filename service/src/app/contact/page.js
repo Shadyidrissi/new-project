@@ -9,7 +9,7 @@ function Page() {
   const form = useRef();
 
   const sendEmail = async (e) => {
-    e.preventDefault();
+    e.preventDefault();    
     
     const name = form.current.user_name.value;
     const email = form.current.user_email.value;
