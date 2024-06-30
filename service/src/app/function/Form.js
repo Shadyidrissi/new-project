@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import emailjs from "@emailjs/browser";
-import checkInput from '../function/function'
+import {checkInput} from '../function/function'
 import Swal from 'sweetalert2'
 
 function Form(props) {
