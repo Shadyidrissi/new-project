@@ -3,7 +3,25 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
-import { InfoContact } from '../function/function';
+
+
+
+function InfoContact(name, email, message) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!name || !email || !message) {
+    return "Input is empty";
+  }
+  if (name.length < 3) {
+    return "The first name is less than 3 characters";
+  }
+  if (!emailPattern.test(email)) {
+    return "The email is not valid";
+  }
+  if (message.length < 10) {
+    return "Please provide more details about your inquiry";
+  }
+  return null;
+}
 
 function Page() {
   const form = useRef();
